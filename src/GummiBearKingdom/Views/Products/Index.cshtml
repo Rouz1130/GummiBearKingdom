@@ -1,5 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<GummiBearKingdom.Models.Product>
+
+<html>
+<head>
+    <title>GummiBearKingdom</title>
+</head>
+<body>
+    <h1>Gummi Bear Kingdom Products:</h1>
+    <ul>
+        @foreach (var listProduct in Model)
+        {
+            <li>Name: @Html.DisplayFor(modelItem => listProduct.Name) @Html.ActionLink("Details", "Details", new { id = listProduct.ProductsId })</li>
+        }
+    </ul>
+</body>
+</html>
