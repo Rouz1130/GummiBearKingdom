@@ -8,19 +8,12 @@ namespace GummiBearKingdom.Models
 {
     public class GummiBearKingdomContext : DbContext
     {
-        public DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Blog> Blog { get; set; }
 
-        public DbSet<Blog> Blogs { get; set; }
-
-        public GummiBearKingdomContext(DbContextOptions<GummiBearKingdomContext> options)
-            : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=GummiBearKingdom;integrated security=True");
         }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
-
     }
 }

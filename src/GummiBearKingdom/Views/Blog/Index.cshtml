@@ -1,0 +1,18 @@
+﻿@model IEnumerable<GummiBearKingdom.Models.Blog>
+
+<html>
+<head>
+    <title>GummiBearKingdom</title>
+</head>
+<body>
+    <h1>Gummi Bear Kingdom Blog:</h1>
+    <ul>
+        @foreach (var listBlog in Model)
+        {
+            <li>Title: @Html.DisplayFor(modelItem => listBlog.Title)</li>
+            <li>Author: @Html.DisplayFor(modelItem => listBlog.Author)</li>
+            <li>Comments: @Html.DisplayFor(modelItem => listBlog.TextBody)</li>
+        }
+    </ul>
+</body>
+</html>
