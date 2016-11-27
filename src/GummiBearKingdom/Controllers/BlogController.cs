@@ -9,7 +9,7 @@ using GummiBearKingdom.Models;
 
 namespace GummiBearKingdom.Controllers
 {
-    public class BlogControllers : Controller
+    public class BlogController : Controller
     {
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
         public IActionResult Index()
@@ -21,7 +21,7 @@ namespace GummiBearKingdom.Controllers
         {
             db.Blog.Add(blog);
             db.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
         }
     }
 }
