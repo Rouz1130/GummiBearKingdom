@@ -2,10 +2,36 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a class="active" href="/">Home</a></li>
+                <li><a class="active" href="/">Product</a></li>
+                <li><a class="active" href="/">Blog</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/contact"><span class="glyphicon glyphicon-user"></span>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <footer>
+        <div>
+            <div class="footer">
+                <p>Copyright &copy; Rouz Majlessi 2016</p>
+            </div>
+        </div>
+    </footer>
+
     <div>
         @RenderBody()
     </div>
