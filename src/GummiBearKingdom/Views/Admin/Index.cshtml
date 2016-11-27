@@ -4,8 +4,22 @@
 }
 
 @model IEnumerable<GummiBearKingdom.Models.Product>
-<div>
-    <h2>Administrator</h2>
-    <h4>@Html.ActionLink("Add Product", "AddProduct")</h4>
-    <p>Current Products</p>
+<div class="container">
+    <h1>Admin Page</h1>
+    <br />
+    <button class="btn btn-lg" onclick="location.href='@Url.Action("AddProduct")'">Add Item</button>
+    <h4>Current Items</h4>
+    @foreach (var Product in Model)
+    {
+        <div>
+            <div class="container">
+                <button class="btn btn-success" onclick="location.href='@Url.Action("DeleteProduct", new { id = Product.ProductsId })'">Delete</button>
+                <button class="btn btn-success" onclick="location.href='@Url.Action("EditProduct", new { id = Product.ProductsId })'">Edit</button>
+                <h5>
+                    @Html.DisplayFor(product => Product.Name) - $@Html.DisplayFor(product => Product.Cost)
+                    <br />@Html.DisplayFor(product => Product.Country)
+                </h5>
+            </div>
+        </div>
+    }
 </div>

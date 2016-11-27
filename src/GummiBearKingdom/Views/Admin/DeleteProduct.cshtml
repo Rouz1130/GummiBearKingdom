@@ -2,3 +2,14 @@
     ViewData["Title"] = "Admin -Add a Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model GummiBearKingdom.Models.Product
+
+<div class="container">
+    <h2>Delete @Html.DisplayFor(model => model.Name)</h2>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="DeleteProduct" />
+}
+@Html.ActionLink("Cancel", "Index")
+</div>

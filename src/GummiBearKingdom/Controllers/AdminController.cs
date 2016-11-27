@@ -27,7 +27,7 @@ namespace GummiBearKingdom.Controllers
         {
             db.Products.Add(product);
             db.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
         }
         public IActionResult EditProduct(int id)
         {
@@ -55,7 +55,7 @@ namespace GummiBearKingdom.Controllers
             var pProduct = db.Products.FirstOrDefault(product => product.ProductsId == id);
             db.Products.Remove(pProduct);
             db.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
         }
     }
 }
