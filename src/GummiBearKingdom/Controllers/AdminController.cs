@@ -29,12 +29,33 @@ namespace GummiBearKingdom.Controllers
             db.SaveChanges();
             return RedirectToAction("index");
         }
+        public IActionResult EditProduct(int id)
+        {
+            var thisItem = db.Products.FirstOrDefault(products => products.ProductsId == id);
+            return View(thisItem);
+        }
+
         [HttpPost]
         public IActionResult EditProduct(Product product)
         {
             db.Entry(product).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteProduct(int id)
+        {
+            var pProduct = db.Products.FirstOrDefault(product => product.ProductsId == id);
+            return View(pProduct);
+        }
+
+        [HttpPost, ActionName("DeleteProduct")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var pProduct = db.Products.FirstOrDefault(product => product.ProductsId == id);
+            db.Products.Remove(pProduct);
+            db.SaveChanges();
+            return RedirectToAction("index");
         }
     }
 }
