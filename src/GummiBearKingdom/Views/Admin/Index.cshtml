@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GummiBearKingdom.Models.Product>
+<div>
+    <h2>Administrator</h2>
+    <h4>@Html.ActionLink("Add Product", "AddProduct")</h4>
+    <p>Current Products</p>
+</div>

@@ -4,24 +4,37 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GummiBearKingdom.Models;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace GummiBearKingdom.Controllers
 {
-    public class BlogControllers : Controller
+    public class AdminController : Controller
     {
+        // GET: /<controller>/
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
         public IActionResult Index()
+        {
+            return View(db.Products.ToList());
+        }
+        public ActionResult AddProduct()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Blog blog)
+        public ActionResult AddProduct(Product product)
         {
-            db.Blog.Add(blog);
+            db.Products.Add(product);
             db.SaveChanges();
             return RedirectToAction("index");
+        }
+        [HttpPost]
+        public IActionResult EditProduct(Product product)
+        {
+            db.Entry(product).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

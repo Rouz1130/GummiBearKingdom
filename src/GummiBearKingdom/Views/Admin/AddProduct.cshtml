@@ -1,0 +1,29 @@
+﻿@{ 
+    ViewData["Title"] = "Admin - Add a Product";
+    Layout = "`/View/Shared/_Layout.cshtml";
+}
+
+@model GummiBearKingdom.Models.Product
+
+<h2>Add Product/s</h2>
+<br />
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+    <legend>Product</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Country)
+    </div>
+
+    <div class="editor-label">
+        @Html.TextBoxFor(model => model.Cost)
+    </div>
+        <input type="submit" value="Create New product" />
+    </fieldset>
+}
