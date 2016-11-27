@@ -1,18 +1,53 @@
-﻿@model IEnumerable<GummiBearKingdom.Models.Blog>
+﻿@{ 
+    ViewData["Title"] = "Add a Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<html>
-<head>
-    <title>GummiBearKingdom</title>
-</head>
-<body>
-    <h1>Gummi Bear Kingdom Blog:</h1>
-    <ul>
-        @foreach (var listBlog in Model)
-        {
-            <li>Title: @Html.DisplayFor(modelItem => listBlog.Title)</li>
-            <li>Author: @Html.DisplayFor(modelItem => listBlog.Author)</li>
-            <li>Comments: @Html.DisplayFor(modelItem => listBlog.TextBody)</li>
-        }
-    </ul>
-</body>
-</html>
+@model IEnumerable<GummiBearKingdom.Models.Blog>
+
+<div class="container">
+    <h2>Gummi Kingdom Reviews</h2>
+
+    @foreach (var Post in Model.OrderByDescending(i => i.BlogId))
+    {
+        <div class="container">
+                 <div>
+                    <h3>Title:</h3>
+                    @Html.DisplayFor(product => Post.Title)
+                </div>
+
+                <div>
+                   <h3>By:</h3>
+                    @Html.DisplayFor(product => Post.Author)
+                </div>
+
+                <div>              
+                   <h3>Comment:</h3>
+                   @Html.DisplayFor(product => Post.TextBody)
+                </div>
+        </div>
+    }
+
+    <div class="container">
+        <div>
+            <h3>Add Post</h3>
+            <form method="post">
+                <div class="form-group">
+
+                    <label for="name"></label>
+                    <input type="text" class="form-control" id="Title" placeholder="Topic" name="Title">
+
+
+                    <label for="name"></label>
+                    <input type="text" class="form-control" id="Author" placeholder="Name" name="Author">
+
+
+                    <label for="name"></label>
+                    <input type="text" class="form-control" id="TextBody" placeholder="Comment" name="TextBody">
+
+                </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+    </div>
+</div>
