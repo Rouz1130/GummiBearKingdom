@@ -19,12 +19,25 @@
     </div>
 
     <div class="editor-field">
-        @Html.TextBoxFor(model => model.Country)
+        @Html.TextBoxFor(model => model.Name)
     </div>
 
     <div class="editor-label">
-        @Html.TextBoxFor(model => model.Cost)
+        @Html.LabelFor(model => model.Country)
     </div>
+
+    <div class="editor-label">
+        @Html.TextBoxFor(model => model.Country)
+    </div>
+    
+     <div class="editor-label">
+        @Html.LabelFor(model => model.Cost)
+     </div>
+
+     <div class="editor-label">
+        @Html.TextBoxFor(model => model.Cost)
+     </div>
+    <br />
         <input type="submit" value="Create New product" />
     </fieldset>
 }
