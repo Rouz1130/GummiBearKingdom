@@ -1,6 +1,6 @@
-﻿namespace GummiBearKingdom.Models
+﻿namespace GummiBearKingdom.Controllers
 {
-    public class GummiBearDbContext
+    internal class GummiBearDbContext
     {
     }
 }
