@@ -1,4 +1,9 @@
-﻿  
+﻿@{
+    ViewData["Title"] = "Admin - Add a Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+  
 @model IEnumerable<GummiBearKingdom.Models.Product>
 
 <html>
@@ -6,7 +11,7 @@
     <title>GummiBearKingdom</title>
 </head>
 <body>
-    <h1>Gummi Bear Kingdom Products:</h1>
+    <h1>Gummi Bear Kingdom Products</h1>
     <ul>
         @foreach (var listProduct in Model)
         {

@@ -14,8 +14,9 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a class="active" href="/">Home</a></li>
-                <li><a class="active" href="/">Product</a></li>
-                <li><a class="active" href="/">Blog</a></li>
+                <li><a class="active" href="/Products/index">Product</a></li>
+                <li><a class="active" href="#">Blog</a></li>
+                <li> @Html.ActionLink("Admin", "Index", "Admin")</li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -24,16 +25,16 @@
         </div>
     </nav>
     <br />
-    <footer>
-        <div>
+    <br />
+    
+    @RenderBody()
+
+    <div class="container">
+        <footer>
             <div class="footer">
                 <p>Copyright &copy; Rouz Majlessi 2016</p>
             </div>
-        </div>
-    </footer>
-
-    <div>
-        @RenderBody()
+        </footer>
     </div>
 </body>
 </html>
