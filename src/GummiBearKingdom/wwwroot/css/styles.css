@@ -116,110 +116,11 @@
   text-decoration: none;
   background-color: #218bc7;
 } 
-@font-face {
-  font-family: 'iconminia';
-  src:url('fonts/iconminia.eot');
-  src:url('fonts/iconminia.eot?#iefix') format('embedded-opentype'),
-   url('fonts/iconminia.svg#iconminia') format('svg'),
-   url('fonts/iconminia.woff') format('woff'),
-   url('fonts/iconminia.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }
 
-@-webkit-keyframes spin {
-  from {-webkit-transform:rotateY(0); }
-  to {-webkit-transform:rotateY(-360deg);}
+.carousel-inner img{
+width: 300px;
 }
-
-.wrapper {
-margin:0px auto 0 auto;
- 
-  -webkit-perspective:800;
-  -webkit-perspective-origin:50% 90px;
-  -webkit-transition: -webkit-perspective, 5s;
-}
-
-.shape {
-  margin:150px auto;
-  height:200px;
-  width:200px;
-  -webkit-transform-style: preserve-3d;
-  -webkit-animation: spin 15s infinite linear;
-  
- }
-
-.wrapper:hover {
--webkit-perspective-origin: 50% -100px;
-}
-
-.plane {
-  position:absolute;
-  width:200px;
-  height:200px;
-  background:rgba(0,0,0,0.6);
-  color:#fff;
-  font-size:10em;
-  text-align:center;
-}
-
-.plane p {
-  display:none;
-color:#fff;
-  background:#333;
-  font-size:0.2em;
-  padding:10px;
-  
-  
-  
-}
-
-.plane:hover p {
-display:inline;
-}
-
-.p1 {
-  background-image: url("http://www.befreeforme.com/blog//wp-content/uploads/2010/10/haribo-logo.jpg");
- 
--webkit-transform: translateZ(250px);
-  }
-
-.p1:hover {
-
-}
-
-.p2 {
-    background-image: url("http://www.candywarehouse.com/assets/item/large/Big-Gummy-Bear-im-131018.jpg");
-
- -webkit-transform: rotateY(45deg) translateZ(250px);
-}
-.p2:hover{
-
-}
-
-.p3 {
--webkit-transform: rotateY(90deg) translateZ(250px);
-}
-
-.p4 {
--webkit-transform: rotateY(135deg) translateZ(250px);
-}
-
-.p5 {
--webkit-transform: rotateY(180deg) translateZ(250px);
-}
-
-.p6 {
--webkit-transform: rotateY(225deg) translateZ(250px);
-}
-
-.p7 {
--webkit-transform: rotateY(270deg) translateZ(250px);
-}
-
-.p8 {
--webkit-transform: rotateY(315deg) translateZ(250px);
-}
-
-
-

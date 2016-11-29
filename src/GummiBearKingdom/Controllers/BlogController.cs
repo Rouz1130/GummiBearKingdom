@@ -12,7 +12,7 @@ namespace GummiBearKingdom.Controllers
     public class BlogController : Controller
     {
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
-        private ABlogModel theView = new ABlogModel();
+        private BlogModel theView = new BlogModel();
 
         public IActionResult Index()
         {
@@ -26,12 +26,12 @@ namespace GummiBearKingdom.Controllers
             return RedirectToAction("Index");
         }
 
-        public class ABlogModel
+        public class BlogModel
         {
             public IEnumerable<Blog> BlogList { get; set; }
             public Blog Blog { get; set; }
             private GummiBearKingdomContext db = new GummiBearKingdomContext();
-            public ABlogModel()
+            public BlogModel()
             {
                 BlogList = db.Blog.ToList();
             }

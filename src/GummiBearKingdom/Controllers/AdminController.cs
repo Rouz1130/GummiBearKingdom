@@ -45,15 +45,15 @@ namespace GummiBearKingdom.Controllers
 
         public IActionResult DeleteProduct(int id)
         {
-            var pProduct = db.Products.FirstOrDefault(product => product.ProductsId == id);
-            return View(pProduct);
+            var Product = db.Products.FirstOrDefault(product => product.ProductsId == id);
+            return View(Product);
         }
 
         [HttpPost, ActionName("DeleteProduct")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var pProduct = db.Products.FirstOrDefault(product => product.ProductsId == id);
-            db.Products.Remove(pProduct);
+            var Product = db.Products.FirstOrDefault(product => product.ProductsId == id);
+            db.Products.Remove(Product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

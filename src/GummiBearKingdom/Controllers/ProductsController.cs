@@ -12,7 +12,7 @@ namespace GummiBearKingdom.Controllers
     public class ProductsController : Controller
     {
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
-
+        
         public Product Product { get; private set; }
 
         public IActionResult Index()

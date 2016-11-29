@@ -192,7 +192,6 @@
 -r:"C:\Users\Rouz\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Rouz\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -resource:"C:\Users\Rouz\Desktop\GummiBearKingdom\src\GummiBearKingdom\obj\Debug\netcoreapp1.0\GummiBearKingdomdotnet-compile.deps.json",GummiBearKingdom.deps.json
-"C:\Users\Rouz\Desktop\GummiBearKingdom\src\GummiBearKingdom\GummiBearDbContext.cs"
 "C:\Users\Rouz\Desktop\GummiBearKingdom\src\GummiBearKingdom\Program.cs"
 "C:\Users\Rouz\Desktop\GummiBearKingdom\src\GummiBearKingdom\Startup.cs"
 "C:\Users\Rouz\Desktop\GummiBearKingdom\src\GummiBearKingdom\Controllers\AdminController.cs"
