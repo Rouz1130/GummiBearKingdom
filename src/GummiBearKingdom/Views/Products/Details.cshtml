@@ -4,18 +4,16 @@
 }
 
 @model GummiBearKingdom.Models.Product
-
 <html>
-<head>
-    <title>Gummi Bear Kingdom - products</title>
-</head>
-<body>
-    <h1>Details</h1>
-    <hr />
-    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-    <br />@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
-    <br />@Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)
-    <p>@Html.ActionLink("Back to products list", "Index")</p>
-
-</body>
+    <body>
+    <div class="container">
+        <h1>Details</h1>
+        <hr />
+        <br />
+            @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+            <br />@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
+            <br />@Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)
+            <p>@Html.ActionLink("Back to products list", "Index")</p>
+        </div>
+    </body>
 </html>

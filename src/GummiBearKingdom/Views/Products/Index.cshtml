@@ -7,16 +7,18 @@
 @model IEnumerable<GummiBearKingdom.Models.Product>
 
 <html>
-<head>
-    <title>GummiBearKingdom</title>
-</head>
 <body>
-    <h1>Gummi Bear Kingdom Products</h1>
-    <ul>
-        @foreach (var listProduct in Model)
-        {
-            <li>Name: @Html.DisplayFor(modelItem => listProduct.Name) @Html.ActionLink("Details", "Details", new { id = listProduct.ProductsId })</li>
-        }
-    </ul>
+    <div class="container">
+        <h1>Gummi Bear Kingdom Products</h1>
+        <hr />
+        <br />
+
+        <ul>
+            @foreach (var listProduct in Model)
+            {
+                <li>Name: @Html.DisplayFor(modelItem => listProduct.Name) @Html.ActionLink("Details", "Details", new { id = listProduct.ProductsId })</li>
+            }
+        </ul>
+    </div>
 </body>
 </html>

@@ -5,39 +5,44 @@
 
 @model GummiBearKingdom.Models.Product
 
-<h2>Add Product/s</h2>
-<br />
+           @using (Html.BeginForm())
+           {
 
-@using (Html.BeginForm())
-{
-    <fieldset>
-    <legend>Product</legend>
+               <fieldset>
+                   <div class="container">
+                       <h1>Add Product/s</h1>
+                       <br />
+                       <h1>Product</h1>
 
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Name)
-    </div>
+                       <div class="editor-label">
+                           @Html.LabelFor(model => model.Name)
+                       </div>
 
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.Name)
-    </div>
-
-
-     <div class="editor-label">
-        @Html.LabelFor(model => model.Country)
-     </div>
-
-      <div class="editor-field">
-        @Html.TextBoxFor(model => model.Country)
-      </div>
+                       <div class="editor-field">
+                           @Html.TextBoxFor(model => model.Name)
+                       </div>
 
 
-      <div class="editor-label">
-        @Html.LabelFor(model => model.Cost)
-      </div>
-      <div class="editor-field">
-        @Html.TextBoxFor(model => model.Cost)
-      </div>
-        <br />
-        <input type="submit" value="Create New product" />
-    </fieldset>
-}
+                       <div class="editor-label">
+                           @Html.LabelFor(model => model.Country)
+                       </div>
+
+                       <div class="editor-field">
+                           @Html.TextBoxFor(model => model.Country)
+                       </div>
+
+
+                       <div class="editor-label">
+                           @Html.LabelFor(model => model.Cost)
+                       </div>
+                       <div class="editor-field">
+                           @Html.TextBoxFor(model => model.Cost)
+                       </div>
+                       <div class="editor-button">
+                           <h2>Add New Product @Html.DisplayFor(model => model.Name)</h2>
+                           <input class="btn btn-primary" type="submit" value="Create New product" />
+                       </div>
+                      </div>
+                    </fieldset>
+                       }
+               

@@ -4,16 +4,13 @@
 }
 @model GummiBearKingdom.Models.Product
 
-<div class="container">
-    <h2>Edit @Html.DisplayFor(model => model.Name)</h2>
-    <button class="btn btn-default" onclick="location.href='@Url.Action("Index")'">Delete</button>
-</div>
-
 @using (Html.BeginForm())
 {
-        <fieldset>
-    <legend>Product</legend>
-
+    @Html.HiddenFor(model => model.ProductsId)
+     <fieldset>
+    <div class="container">
+    <h1>Product</h1>
+    </div>
     <div class="editor-label">
         @Html.LabelFor(model => model.Name)
     </div>
@@ -26,7 +23,7 @@
         @Html.LabelFor(model => model.Country)
     </div>
 
-    <div class="editor-label">
+    <div class="editor-field">
         @Html.TextBoxFor(model => model.Country)
     </div>
     
@@ -34,11 +31,17 @@
         @Html.LabelFor(model => model.Cost)
      </div>
 
-     <div class="editor-label">
+     <div class="editor-field">
         @Html.TextBoxFor(model => model.Cost)
      </div>
     <br />
-        <input type="submit" value="Save" />
+
+         <div class="editor-button">
+             <h2>Edit @Html.DisplayFor(model => model.Name)</h2>
+             <button class="btn btn-primary" onclick="location.href='@Url.Action("Index")'">Delete</button>
+        
+        <h2><input class="btn btn-primary" type="submit" value="Save" /></h2>
+          </div>
     </fieldset>
 }
 
